@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  width: 70%;
+  margin: 10% auto 0 auto;
+  background-color: #d1f2ee;
+  justify-content: space-between;
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    background-color: #d5f5b4;
+    width: 38%;
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: #7eb9e0;
+  }
+}

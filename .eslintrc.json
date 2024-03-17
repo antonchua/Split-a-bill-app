@@ -1,0 +1,123 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["node_modules", "lib", "dist", "supress for statement"],
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "",
+    "eslint-config-prettier",
+    "plugin:react/jsx-runtime",
+    "plugin:eslint-plugin-import/typescript"
+  ],
+  "plugins": [
+    "eslint-plugin-react",
+    "eslint-plugin-react-hooks",
+    "eslint-plugin-jsx-a11y",
+    "eslint-plugin-import",
+    "eslint-plugin-jest",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "env": {
+    "es6": true,
+    "worker": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "rules": {
+    "no-console": "off",
+    "valid-jsdoc": "error",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "no-unused-expressions": "off",
+    "func-style": ["error", "expression"],
+    "no-prototype-builtins": "off",
+    "import/prefer-default-export": "off",
+    "no-empty-function": "off",
+    "arrow-body-style": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true,
+        "packageDir": ""
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/forbid-prop-types": "off",
+    "react/button-has-type": "off",
+    "react/destructuring-assignment": "off",
+    "react/require-default-props": "off",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    "react/jsx-fragments": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/no-static-element-interactions": [
+      "error",
+      {
+        "handlers": [
+          "onClick",
+          "onMouseDown",
+          "onMouseUp",
+          "onKeyPress",
+          "onKeyDown",
+          "onKeyUp"
+        ]
+      }
+    ],
+    "jsx-a11y/href-no-hash": "off",
+    // Ensure consistent use of file extension within the import path
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    // camelcase interference fix.
+    "camelcase": "off",
+    "@typescript-eslint/naming-convention": "off",
+    // Disable indent checks (let prettier handle styling)
+    "indent": "off",
+    // no-array-constructor interference fix.
+    "no-array-constructor": "off",
+    "@typescript-eslint/no-array-constructor": "error",
+    // no-unused-vars interference fix.
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    // no-useless-constructor interference fix.
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": "error",
+    // semi interference fix.
+    "semi": "off",
+    "@typescript-eslint/semi": "off",
+    // no-shadow interference fix.
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    // no-redeclare interference fix.
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": "error",
+    // no-use-before-define interference fix.
+    // allow functions to be defined after they're used,
+    // function declarations are hoisted, so it's safe
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error", "nofunc"]
+  }
+}
