@@ -1,7 +1,7 @@
 import styles from './app.module.scss';
 import { AddFriendForm } from './add-friend-form/add-friend-form';
-import { FriendList } from './friend-list/friend-list';
-import { SplitForm } from './split-form/stlit-form';
+import { FriendList } from './components/friend-list/friend-list';
+import { SplitForm } from './components/split-form/stlit-form';
 
 const App = () => {
   return (

@@ -14,7 +14,7 @@
     justify-content: space-between;
     font-size: 2rem;
     input {
-      width: 60%;
+      width: 250px;
       padding: 5px 10px;
       font-size: 1.8rem;
       border: 2px solid #e0e0ca;
@@ -29,7 +29,9 @@
   }
 
   &__add {
-    width: 150px;
+    width: 250px;
+    margin-top: 10px;
     padding: 10px 20px;
+    align-self: end;
   }
 }
