@@ -1,0 +1,46 @@
+@import "src/styles/styles";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  background-color: var(--color-light);
+  border-radius: 10px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    select {
+      appearance: none;
+      width: 150px;
+      padding: 5px 15px;
+      border: 2px solid var(--color-input-border);
+      border-radius: 5px;
+      outline: none;
+      transition: 0.3s;
+      font-size: 1.8rem;
+      cursor: pointer;
+      option {
+        background-color: var(--color-focus-bg);
+      }
+    }
+    button {
+      align-self: end;
+    }
+  }
+
+}

@@ -1,13 +1,12 @@
 :root {
-  --background-header: #d2d8dc;
-  --background-header_menu: #fff;
-  --background-header_burger: #2a2828;
+  --color-lightest: #fff4e6;
+  --color-light: #ffe8cc;
+  --color-medium: #ffa94d;
+  --color-dark: #ff922b;
+  --color-input-border: #e0e0ca;
+  --color-focus-bg: #def4f2;
+  --color-focus-border: #c4c4a9;
 }
-
-//text fonts
-$font-size-s: 1.2rem;
-$font-size-m: 1.8rem;
-$font-size-l: 2.8rem;
 
 //media query
 $tablet-size: 728px;

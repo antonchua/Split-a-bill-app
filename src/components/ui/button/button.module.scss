@@ -1,0 +1,49 @@
+@import "src/styles/styles";
+
+.small {
+  width: 85px;
+  height: 38px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--color-medium);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: var(--color-dark);
+  }
+}
+
+.medium {
+  width: 150px;
+  height: 38px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--color-medium);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: var(--color-dark);
+  }
+}
+
+.large {
+  width: 250px;
+  height: 38px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--color-medium);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: var(--color-dark);
+  }
+}

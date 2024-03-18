@@ -1,5 +1,5 @@
 import styles from './app.module.scss';
-import { AddFriendForm } from './add-friend-form/add-friend-form';
+import { AddFriendForm } from './components/add-friend-form/add-friend-form';
 import { FriendList } from './components/friend-list/friend-list';
 import { SplitForm } from './components/split-form/stlit-form';
 

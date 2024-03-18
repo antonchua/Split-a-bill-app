@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df578a93-6269-4626-8a58-f1e9a4a2dda4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/add-friend-form/add-friend-form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add-friend-form/add-friend-form.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/add-friend-form/add-friend-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add-friend-form/add-friend-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/add-friend-form/add-friend-form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add-friend-form/add-friend-form.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/add-friend-form/add-friend-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add-friend-form/add-friend-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/friend-list-item/friend-list-item.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/friend-list-item/friend-list-item.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/friend-list-item/friend-list-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/friend-list-item/friend-list-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/friend-list/friend-list.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/friend-list/friend-list.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/friend-list/friend-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/friend-list/friend-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/split-form/split-form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/split-form/split-form.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/split-form/stlit-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/split-form/stlit-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button/button.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +114,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Programming/code/Split-a-bill-app",
+    "last_opened_file_path": "E:/Programming/code/owlapp",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "E:\\Programming\\code\\Split-a-bill-app\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "ts.external.directory.path": "E:\\Programming\\code\\Split-a-bill-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -115,6 +127,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming\code\Split-a-bill-app\src\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -146,7 +161,8 @@
       <workItem from="1710678905251" duration="497000" />
       <workItem from="1710682397906" duration="154000" />
       <workItem from="1710694195914" duration="77000" />
-      <workItem from="1710696705611" duration="1309000" />
+      <workItem from="1710696705611" duration="10318000" />
+      <workItem from="1710751710823" duration="33501000" />
     </task>
     <servers />
   </component>
