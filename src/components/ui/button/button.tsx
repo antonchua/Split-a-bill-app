@@ -5,11 +5,11 @@ type ButtonType = {
     children: React.ReactNode
     type: 'submit' | 'button'
     btnStyleType: 'small' | 'medium' | 'large'
-    // onClick(): void
+    onClick?(): void
 }
 
-export const Button = ({children, btnStyleType, type}: ButtonType) => {
+export const Button = ({children, btnStyleType, type, onClick}: ButtonType) => {
     return (
-        <button type={type} className={styles[btnStyleType]}>{children}</button>
+        <button type={type} className={styles[btnStyleType]} onClick={onClick}>{children}</button>
     )
 }

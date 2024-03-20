@@ -1,5 +1,5 @@
 import {StoreTypes} from "../store/store-types";
-import FriendsResponse from './friends.json'
+import FriendsResponse from './initialFriends.json'
 
 class FriendsApi {
     private readonly delay = 250

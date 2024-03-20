@@ -2,7 +2,7 @@
 
 .list__item {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   align-items: center;
   padding: 20px;
   border-radius: 10px;
@@ -12,8 +12,26 @@
   &:hover {
     background-color: var(--color-lightest);
   }
-
+  div {
+    width: 240px;
+    padding-left: 15px;
+  }
   img {
     border-radius: 50%;
+    width: 48px;
+  }
+  button {
+    align-self: end;
+    width: 104px;
   }
 }
+.active {
+  background-color: var(--color-lightest);
+}
+.owe {
+  color: orangered;
+}
+.owes {
+  color: green;
+}
+
