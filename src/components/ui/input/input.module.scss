@@ -16,3 +16,21 @@
     border: 2px solid var(--color-focus-border);
   }
 }
+.medium {
+  width: 250px;
+  padding: 5px 15px;
+  border: 2px solid var(--color-input-border);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 1.8rem;
+
+  &[type='text']:focus {
+    background-color: var(--color-focus-bg);
+    border: 2px solid var(--color-focus-border);
+  }
+  &[type='number']:focus {
+    background-color: var(--color-focus-bg);
+    border: 2px solid var(--color-focus-border);
+  }
+}

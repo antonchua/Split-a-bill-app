@@ -17,8 +17,8 @@ export const Friend = observer(({ friend }: FriendType) => {
       <div>
         <h3>{friend.name}</h3>
           {friend.balance === 0 && <p>You and {friend.name} are even</p>}
-          {friend.balance > 0 && <p className={friend.balance > 0 ? styles.owes : ''}> {friend.name} owes you {friend.balance}$</p>}
-          {friend.balance < 0 && <p className={cx({[styles.owe]: friend.balance < 0})}>You owe {friend.name} {Math.abs(friend.balance)}$</p>}
+          {friend.balance > 0 && <p className={friend.balance > 0 ? styles.green : ''}> {friend.name} owes you {friend.balance}$</p>}
+          {friend.balance < 0 && <p className={cx({[styles.red]: friend.balance < 0})}>You owe {friend.name} {Math.abs(friend.balance)}$</p>}
       </div>
       <Button
         type={'button'}

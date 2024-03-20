@@ -1,6 +1,6 @@
 export namespace StoreTypes {
     export type FriendsObjectType = {
-        id: number
+        id: string
         name: string
         image: string
         balance: number

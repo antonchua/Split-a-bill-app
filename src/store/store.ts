@@ -15,36 +15,17 @@ class Store {
   async fetchList(): Promise<void> {
     this.friendList = await friendsApi.getFriends();
   }
+  @action 
+  addFriend(id: string, image: string, name: string): void {
+    const list = [...this.friendList]
+    list.push({id, name, image, balance: 0})
+    this.friendList = [...list]
+  }
   @action
-  selectActiveFriend(id: number): void {
+  selectActiveFriend(id: string): void {
     const friend = this.friendList.find(fr => fr.id === id)
     this.isActive = !!friend;
   }
-  // @action
-  // selectFriend(id: number): void {
-  //   const friendList = [...this.friendList];
-  //   const prevSelected = this.friendList.find((fr) => fr.selected);
-  //   if (prevSelected) {
-  //     const prevSelectedIdx = this.friendList.findIndex((fr) => fr.selected);
-  //     friendList[prevSelectedIdx] = { ...prevSelected, selected: false };
-  //     this.friendList = [...friendList];
-  //   }
-  //   const currentSelected = this.friendList.find((el) => el.id === id);
-  //   if (currentSelected) {
-  //     const currentSelectedIdx = this.friendList.findIndex((fr) => fr.id === id);
-  //     friendList[currentSelectedIdx] = { ...currentSelected, selected: true };
-  //     this.friendList = [...friendList];
-  //   }
-  // }
-
-  // @computed
-  // get FriendName(): string {
-  //   const friend = this.friendList.find(fr => fr.selected)
-  //   if (friend) {
-  //     return friend.name
-  //   }
-  //   return ''
-  // }
 }
 
 export const store = new Store();
