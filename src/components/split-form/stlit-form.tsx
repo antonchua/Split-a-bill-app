@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button } from '../ui/button/button';
 import { Input } from '../ui/input/input';
 import { ChangeEvent } from 'react';
@@ -9,33 +9,34 @@ import styles from './split-form.module.scss';
 
 export const SplitForm = observer(() => {
   const [bill, setBill] = useState('');
-  const [myExpense, setMyExpense] = useState('');
+  const [userExpense, setUserExpense] = useState('');
   const [friendExpense, setFriendExpense] = useState('');
-  const [selectBill, setSelectBill] = useState('You')
-  // const name = store.FriendName
-  const handleBill = (e: ChangeEvent<HTMLInputElement>): void => {
-    setBill(e.target.value);
-    if (bill && !myExpense) {
-      setFriendExpense(e.target.value);
+  const [selectedPayOption, setSelectedPayOption] = useState('user');
+  const handleUserExpense = (e: ChangeEvent<HTMLInputElement>) => {
+    if (Number(e.target.value) > Number(bill)) {
+      return;
     }
+    setUserExpense(e.target.value);
+    const remainder = Number(bill) - Number(e.target.value);
+    setFriendExpense(remainder.toString());
+  };
+  const handleFriendExpense = (e: ChangeEvent<HTMLInputElement>) => {
+    if (Number(e.target.value) > Number(bill)) {
+      return;
+    }
+    setFriendExpense(e.target.value);
+    const remainder = Number(bill) - Number(e.target.value);
+    setUserExpense(remainder.toString());
   };
   const handleForm = (e: React.SyntheticEvent): void => {
     e.preventDefault();
+    if (bill.trim().length === 0 || userExpense.trim().length == 0 || friendExpense.trim().length === 0) return;
+    store.splitTheBill(userExpense, friendExpense, selectedPayOption);
   };
-  useEffect(() => {
-    if (bill.trim() && myExpense.trim()) {
-      const remainder = +bill - +myExpense;
-      setFriendExpense(remainder.toString());
-    }
-    if (myExpense.trim().length === 0) {
-      setFriendExpense(bill);
-    }
-  }, [bill, myExpense]);
-  console.log(store.friendList)
-  console.log(selectBill)
+
   return (
     <div className={styles.wrapper}>
-      <h1>SPLIT A BILL WITH NAME</h1>
+      <h1>SPLIT A BILL WITH {store.friend?.name}</h1>
       <form className={styles.form} onSubmit={handleForm}>
         <label htmlFor="billValue">
           Bill value:
@@ -45,36 +46,38 @@ export const SplitForm = observer(() => {
             name={'billValue'}
             widthType={'small'}
             value={bill}
-            onChange={handleBill}
+            onChange={(e) => setBill(e.target.value)}
           />
         </label>
-        <label htmlFor="ownerExpense">
+        <label htmlFor="userExpense">
           Your expense:
           <Input
+            disabled={selectedPayOption === store.friend?.name}
             type={'number'}
-            id={'ownerExpense'}
-            name={'ownerExpense'}
+            id={'userExpense'}
+            name={'userExpense'}
             widthType={'small'}
-            value={myExpense}
-            onChange={(e) => setMyExpense(e.target.value)}
+            value={userExpense}
+            onChange={handleUserExpense}
           />
         </label>
         <label htmlFor="friendExpense">
-          Friend expense:
+          {store.friend?.name} expense:
           <Input
             type={'number'}
+            disabled={selectedPayOption === 'user'}
             id={'friendExpense'}
             name={'friendExpense'}
             widthType={'small'}
             value={friendExpense}
-            onChange={(e) => setFriendExpense(e.target.value)}
+            onChange={handleFriendExpense}
           />
         </label>
         <label htmlFor="billPaying">
           Who is paying the bill?:
-          <select name="billPaying" id="billPaying" onChange={(e) => setSelectBill(e.target.value)}>
-            <option value="You">You</option>
-            <option>name</option>
+          <select name="billPaying" id="billPaying" onChange={(e) => setSelectedPayOption(e.target.value)}>
+            <option value="user">You</option>
+            <option value={store.friend?.name}>{store.friend?.name}</option>
           </select>
         </label>
         <Button type={'submit'} btnStyleType={'medium'}>

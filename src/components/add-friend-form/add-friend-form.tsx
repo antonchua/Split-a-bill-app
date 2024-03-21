@@ -14,9 +14,10 @@ export const AddFriendForm = observer(() => {
   const imageUrl = 'https://i.pravatar.cc/48';
   const handleForm = (e: React.SyntheticEvent) => {
     e.preventDefault();
+    if (!name.trim()) return;
     store.addFriend(id, imageUrl, name);
+    setName('');
   };
-  console.log(store.friendList);
   return (
     <div className={styles.wrapper}>
       {btnToggle && (
@@ -34,7 +35,7 @@ export const AddFriendForm = observer(() => {
           </label>
           <label htmlFor="image">
             Image URL:
-            <Input type="text" id="image" name="image" widthType="medium" value={imageUrl} />
+            <Input type="text" id="image" name="image" widthType="medium" defaultValue={imageUrl} />
           </label>
           <Button type={'submit'} btnStyleType={'large'}>
             Add
@@ -42,12 +43,16 @@ export const AddFriendForm = observer(() => {
         </form>
       )}
       <div>
-        {btnToggle && <Button type={'button'} btnStyleType={'small'} onClick={() => setBtnToggle(!btnToggle)}>
-          Close
-        </Button>}
-        {!btnToggle && <Button type={'button'} btnStyleType={'medium'} onClick={() => setBtnToggle(!btnToggle)}>
-          Add friend
-        </Button>}
+        {btnToggle && (
+          <Button type={'button'} btnStyleType={'small'} onClick={() => setBtnToggle(!btnToggle)}>
+            Close
+          </Button>
+        )}
+        {!btnToggle && (
+          <Button type={'button'} btnStyleType={'medium'} onClick={() => setBtnToggle(!btnToggle)}>
+            Add friend
+          </Button>
+        )}
       </div>
     </div>
   );

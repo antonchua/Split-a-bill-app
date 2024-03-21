@@ -14,8 +14,13 @@
   }
   div {
     padding-left: 15px;
+    h3::first-letter {
+      text-transform: uppercase;
+    }
   }
   img {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
   }
 }

@@ -1,8 +1,8 @@
 import { Friend } from '../friend/friend';
 import { observer } from 'mobx-react-lite';
 import { store } from '../../store/store';
-import styles from './friend-list.module.scss';
 import { useEffect } from 'react';
+import styles from './friend-list.module.scss';
 
 export const FriendList = observer(() => {
   useEffect(() => {

@@ -1,15 +1,21 @@
-@import "styles/styles";
+@import 'styles/styles';
 .wrapper {
   display: flex;
   width: 950px;
   margin: 10% auto 0 auto;
   justify-content: space-between;
+  @include screen(650px) {
+    flex-direction: column;
+    width: 490px;
+  }
 
   .leftSide {
     display: flex;
     flex-direction: column;
     width: 430px;
-
+    @include screen(650px) {
+      order: 2;
+    }
   }
 
   .rightSide {
@@ -17,6 +23,8 @@
     flex-direction: column;
     width: 490px;
     height: auto;
-
+    @include screen(650px) {
+      order: 1;
+    }
   }
 }
